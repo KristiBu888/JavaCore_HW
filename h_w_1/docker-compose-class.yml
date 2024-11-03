@@ -1,0 +1,7 @@
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    command: javac -sourcepath /media/src -d /media/ourclasses /media/src/ru/kb/kristibu/Main.java
+    volumes:
+      - ./ourclasses:/media/ourclasses  # Монтируем выходную директорию для классов
+      - ./src:/media/src         # Монтируем директорию с исходным кодом

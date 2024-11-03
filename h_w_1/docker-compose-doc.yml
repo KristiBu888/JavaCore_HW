@@ -1,0 +1,7 @@
+services:
+  app:
+    image: bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+    command: javadoc -d /media/mydoc -sourcepath /media/src -cp /media/ourclasses/ -subpackages ru
+    volumes:
+      - ./mydoc:/media/mydoc
+      - ./src:/media/src
